@@ -1,100 +1,60 @@
 import Image from "next/image";
 
+import perfil from "../img/perfil.png";
+import home from "../img/casa.png";
+import lupa from "../img/lupa.png";
+import favoritos from "../img/favoritos.png";
+import warrior from "../img/warrior.png";
+
+// import wifi from "../img/wi-fi (1).png";
+// import bateria from "../img/bateria-fraca.png";
+// import sinal from "../img/barras-de-sinal.png";
+
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="bg-scroll bg-right bg-[url('../img/warriorFundo.avif')] text-white bg-cover h-screen">
+      {/* <header className="bg-black flex justify-between p-2">
+        <span className="text-white ml-10">17:00</span>
+        <div className="flex">
+          <Image src={wifi} alt="wifi"/>
+          <Image src={sinal} alt="sinal"/>
+          <Image src={bateria} alt="bateria"/>
+          </div>
+          </header> */}
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <header>  
+        <div className="flex items-center justify-between p-5">
+          <h1>MAX</h1>
+          <Image src={perfil} alt="perfil" className="h-10 w-10"/>
+        </div>
+        <div className="flex p-5 gap-8 text-nowrap flex-wrap">
+          <span>Home</span>
+          <span>Series</span>
+          <span>Movies</span>
+          <span>HBO</span>
+          <span>New & Notices</span>
+        </div>
+      </header>
+
+      <main className="mt-80 bg-black">
+        <div className="flex justify-center items-center flex-col">
+          <Image src={warrior} alt="warrior" className="w-1/2"/>
+          <span className="w-1/2 text-center">2019 </span>
+          <span className="w-1/2 text-center">Um drama intenso que acompanha diferentes famílias do crime organizado na Chinatown de San Francisco no século XIX.</span>
+        </div>
+        <div className="flex gap-2 justify-center p-4">
+          <div className="h-1.5 w-1.5 bg-white rounded-full"></div>
+          <div className="h-1.5 w-1.5 bg-zinc-400 rounded-full"></div>
+          <div className="h-1.5 w-1.5 bg-zinc-400 rounded-full"></div>
+          <div className="h-1.5 w-1.5 bg-zinc-400 rounded-full"></div>
+          <div className="h-1.5 w-1.5 bg-zinc-400 rounded-full"></div>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer className="fixed bottom-0 bg-black/50 flex w-full justify-around p-8">
+          <Image src={home} alt="home" className="h-8 w-8"/>
+          <Image src={favoritos} alt="favoritos" className="h-8 w-8"/>
+          <Image src={lupa} alt="lupa" className="h-8 w-8"/>
       </footer>
     </div>
   );
